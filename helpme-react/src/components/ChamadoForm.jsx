@@ -4,7 +4,7 @@ import Button from "./Button";
 const ChamadoForm = ({ onSave }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSave(); // Ação ao salvar o chamado
+        onSave();
     };
 
     return (

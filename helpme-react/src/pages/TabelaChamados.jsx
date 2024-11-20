@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../components/Header";
 import TabelaChamados from "../components/TabelaChamados";
 import "../assets/css/style.css";
+import { Link } from "react-router-dom";
+
 
 const chamadosData = [
     {
@@ -17,7 +19,7 @@ const chamadosData = [
         email: "joao@email.com",
         meioPreferido: "Telefone",
         telefone: "(82) 99999-9999",
-    }
+    },
 
 ];
 
@@ -26,6 +28,9 @@ const TabelaChamadosPage = () => {
         <div>
             <Header />
             <div className="container">
+                <Link to="/opcoes" className="back-link">
+                    <i className="fas fa-arrow-left"></i>
+                </Link>
                 <TabelaChamados chamados={chamadosData} />
             </div>
         </div>

@@ -144,7 +144,7 @@ textarea:focus {
 
 /* Aqui é para os botões do facebook e do google */
 .social-login {
-    margin: 1.5rem 0;
+    margin: 1.3rem 0;
     text-align: center;
 }
 
@@ -273,3 +273,109 @@ textarea:focus {
     text-align: center;
   }
   
+  
+  /* Sidebar */
+ /* Estilo para o botão de logout */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .logout-button:hover {
+    background-color: #ff3333;
+  }
+  
+  /* Estilo para os botões de opções */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as linhas de botões */
+    margin-top: 60px; /* Ajuste para não sobrepor o botão de logout */
+    width: 100%;
+    align-items: center; /* Alinha os botões no centro */
+  }
+  
+  /* Flexbox para a disposição lado a lado */
+  .button-row {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os botões na mesma linha */
+  }
+  
+  .option-button {
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 300px; 
+  }
+  
+  .option-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .option-button:active {
+    transform: scale(0.98); 
+  }
+  
+  /* Cores dos botões */
+  .option-chamado {
+    background-color: #4CAF50; 
+  }
+  
+  .option-chamado:hover {
+    background-color: #45a049; 
+  }
+  
+  .option-cadastro {
+    background-color: #007bff;
+  }
+  
+  .option-cadastro:hover {
+    background-color: #0056b3; 
+  }
+  
+  .option-perfil {
+    background-color: #ff9c07; 
+  }
+  
+  .option-perfil:hover {
+    background-color: #df8600; 
+  }
+  
+  .option-tabela {
+    background-color: #9b01f5; 
+  }
+  
+  .option-tabela:hover {
+    background-color: #63009c;
+  }
+  
+ 
+  .content {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* setinha para voltar */
+  .back-link {
+    font-size: 20px;
+    color: #f8f8f8;  /* Cor azul */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-button:hover {
+    color: #0056b3; 
+}

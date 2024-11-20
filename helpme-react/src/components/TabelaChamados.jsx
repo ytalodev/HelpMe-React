@@ -12,7 +12,11 @@ const TabelaChamados = ({ chamados }) => {
 
     return (
         <div>
-            <h1>Tabela de Chamados</h1>
+            <div className="form-header">
+                <div className="title">
+                    <h1>Tabela de chamados</h1>
+                </div>
+            </div>
             <table className="data-table">
                 <thead>
                     <tr>
