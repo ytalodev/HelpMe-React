@@ -1,8 +1,6 @@
 import React from "react";
 
-
 // Component criado para o forms de recuperar senha
-
 const Form = ({ onSubmit }) => {
     return (
         <div className="form">

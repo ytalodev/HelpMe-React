@@ -1,4 +1,5 @@
 import React from "react";
+
 // Component criado para os botões do google e facebook
 const SocialLoginButtons = () => {
     return (

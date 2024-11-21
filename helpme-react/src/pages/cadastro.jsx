@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import CadastroForm from "../components/CadastroForm";
 import Message from "../components/Message";
-import { Link } from "react-router-dom";  // Importando o Link para navegação
+import { Link } from "react-router-dom";
 import "../assets/css/style.css";
 
 const Cadastro = () => {
@@ -18,7 +18,6 @@ const Cadastro = () => {
             <Header />
             <div className="container">
                 <div className="form">
-                    {/* Link para voltar à tela de login com ícone de seta */}
                     <Link to="/" className="back-link">
                         <i className="fas fa-arrow-left"></i>
                     </Link>

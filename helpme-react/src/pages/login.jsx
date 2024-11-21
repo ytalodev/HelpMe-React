@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // Adicione essa importação
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 import "../assets/css/style.css";
 
 const Login = () => {
     const [message, setMessage] = useState("");
-    const navigate = useNavigate(); // Use o hook de navegação
+    const navigate = useNavigate();
 
     const handleLogin = () => {
         setMessage("Login realizado com sucesso!");

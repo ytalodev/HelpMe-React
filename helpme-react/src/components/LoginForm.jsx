@@ -1,25 +1,41 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importe o hook de navegação
+import { useNavigate } from "react-router-dom";
 import SocialLoginButtons from "./SocialLoginButtons";
 
 function Login() {
-    const [email, setEmail] = useState(""); // Estado para armazenar o email
-    const [password, setPassword] = useState(""); // Estado para armazenar a senha
-    const navigate = useNavigate(); // Inicializa o hook de navegação
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    // Função para tratar o login
+    // Função para o login
     const handleLogin = (e) => {
-        e.preventDefault(); // Impede o comportamento padrão do formulário
-        // Aqui você pode fazer a validação do login (autenticação)
+        e.preventDefault();
 
-        // Se o login for bem-sucedido, redireciona para a página de opções
-        navigate("/opcoes");
+        // Validação básica para o front, sem o back
+        if (!email || !password) {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Digite um e-mail válido!");
+            return;
+        }
+
+        // Aqui é se o login for válido, se quiser alterar o login e senha, mude aqui.
+        if (email === "teste@exemplo.com" && password === "123456") {
+            alert("Login bem-sucedido!");
+            navigate("/opcoes");
+        } else {
+            alert("E-mail ou senha incorretos!");
+        }
     };
 
     return (
         <div className="container">
             <div className="form">
-                <form onSubmit={handleLogin}> {/* Adiciona a função de submit */}
+                <form onSubmit={handleLogin}>
                     <div className="form-header">
                         <div className="title">
                             <h1>Login</h1>

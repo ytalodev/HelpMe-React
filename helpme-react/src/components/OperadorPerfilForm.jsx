@@ -4,7 +4,7 @@ import Button from "./Button";
 const OperadorPerfilForm = ({ onSave }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSave(); // Ação ao salvar os dados do operador
+        onSave();
     };
 
     return (
