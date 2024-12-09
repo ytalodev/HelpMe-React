@@ -21,10 +21,10 @@ const ChamadoForm = ({ onSave }) => {
                     <input id="user" type="text" name="user" placeholder="Digite seu nome" required />
                 </div>
 
-                <div className="input-box">
+                {/* <div className="input-box">
                     <label htmlFor="setor">Setor:</label>
                     <input id="setor" type="text" name="setor" placeholder="Digite seu setor" required />
-                </div>
+                </div> */}
 
                 <div className="input-box">
                     <label htmlFor="responsavel">Responsável:</label>

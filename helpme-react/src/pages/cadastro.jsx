@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import CadastroForm from "../components/CadastroForm";
-import Message from "../components/Message";
+import MensagemSucesso from "../components/mesagemsucesso";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css";
 
 const Cadastro = () => {
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState(false);
 
     const handleCadastro = () => {
-        setMessage("Cadastro realizado com sucesso!");
-        setTimeout(() => setMessage(""), 3000); // Limpa a mensagem após 3 segundos
+        setTimeout(() => setMessage(true), 3000); 
     };
 
     return (
@@ -22,7 +21,7 @@ const Cadastro = () => {
                         <i className="fas fa-arrow-left"></i>
                     </Link>
                     <CadastroForm onCadastro={handleCadastro} />
-                    {message && <Message type="success" text={message} />}
+                    {message && <MensagemSucesso tipo="cadastro" />}
                 </div>
             </div>
         </>

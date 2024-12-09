@@ -22,7 +22,7 @@ const RecuperarSenha = () => {
                     <i className="fas fa-arrow-left"></i>
                 </Link>
                 <Form onSubmit={handleRecuperarSenha} />
-                {emailEnviado && <MensagemSucesso />}
+                {emailEnviado && <MensagemSucesso tipo="recuperarSenha"/>}
             </div>
         </div>
     );

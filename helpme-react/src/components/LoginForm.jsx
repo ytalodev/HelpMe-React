@@ -5,13 +5,17 @@ import SocialLoginButtons from "./SocialLoginButtons";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false); 
     const navigate = useNavigate();
 
-    // Função para o login
+    // Alternar visibilidade da senha
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     const handleLogin = (e) => {
         e.preventDefault();
 
-        // Validação básica para o front, sem o back
         if (!email || !password) {
             alert("Preencha todos os campos!");
             return;
@@ -23,7 +27,7 @@ function Login() {
             return;
         }
 
-        // Aqui é se o login for válido, se quiser alterar o login e senha, mude aqui.
+        // Login simulado (para ajustar as credenciais, edite aqui)
         if (email === "teste@exemplo.com" && password === "123456") {
             alert("Login bem-sucedido!");
             navigate("/opcoes");
@@ -49,23 +53,33 @@ function Login() {
                                 type="email"
                                 name="email"
                                 placeholder="Digite seu E-mail"
-                                required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                         </div>
 
                         <div className="input-box">
                             <label htmlFor="password">Senha:</label>
-                            <input
-                                id="password"
-                                type="password"
-                                name="password"
-                                placeholder="Digite sua senha"
-                                required
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
+                            <div className="password-container">
+                                <input
+                                    id="password"
+                                    type={showPassword ? "text" : "password"}
+                                    name="password"
+                                    placeholder="Digite sua senha"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                />
+                                <span
+                                    className="toggle-password-visibility"
+                                    aria-label="Mostrar ou ocultar senha"
+                                    onClick={togglePasswordVisibility}
+                                >
+                                    {showPassword ? "🔓" : "🔒"}
+                                </span>
+                            </div>
+                            <p> Esqueceu a senha? <a href="/recuperar-senha">Clique aqui</a></p>
                         </div>
                     </div>
                     <SocialLoginButtons />
@@ -74,10 +88,7 @@ function Login() {
                     </div>
                     <div className="signup-link">
                         <p>
-                            Não tem uma conta? <a href="/cadastro">Entre aqui</a>
-                        </p>
-                        <p>
-                            Esqueceu a senha? <a href="/recuperar-senha">Clique aqui</a>
+                            Não tem uma conta? <a href="/cadastro">Cadastre-se aqui</a>
                         </p>
                     </div>
                 </form>

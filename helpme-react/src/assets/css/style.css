@@ -46,20 +46,19 @@
     display: flex;
     justify-content: space-between;
 }
-
 .form-header .title {
     display: flex; 
     justify-content: center; 
     align-items: center;
     width: 100%;
 }
+
 /* Para os botões de todas as páginas, todos são o mesmo, so muda o texto */
 .login-button {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .login-button button{
     border: none;
     color: white;
@@ -70,17 +69,18 @@
     border-radius: 50px;
     cursor: pointer;
     width: 30%;
+    height: 40px;
+    margin: 15px;
 }
-
 .login-button button:hover {
     background-color: #0855c9;
 }
-
 .login-button button a {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
 }
+
 /* Aqui é para os inputs de todas as páginas */
 .input-group {
     display: flex; 
@@ -88,34 +88,40 @@
     justify-content: center; 
     align-items: center; 
     padding-inline: 1rem 0;
-    width: 100%;
+    width: 80%;
     margin: 0 auto; 
 }
-
 .input-box {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
     width: 100%; 
 }
-
 .input-box input {
     width: 100%; 
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     box-shadow: 1px 1px 6px #0000001c;
     background-color: #fff; 
+    font-style: italic;
 }
+
 /* Aqui é exclusivo pro input da Descrição*/
 #descricao {
-    width: 100%;
-    height: 150px;
-    padding: 1rem 1rem; 
-    font-size: 1rem; 
-    border-radius: 20px; 
-    resize: none;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    margin-top: 7px;
+    height: 200px;
+}
+#descricao::placeholder {
+    color: #C7C7C7;
+    font-style: italic; 
 }
 
 textarea:focus {
@@ -127,17 +133,14 @@ textarea:focus {
 .input-box input:hover {
     background-color: #eeeeeee5;
 }
-
 .input-box input:focus-visible{
     outline: 1px solid #0867F5;
 }
-
 .input-box label {
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
 }
-
 .input-box input::placeholder{
     color: #52525275;
 }
@@ -147,7 +150,6 @@ textarea:focus {
     margin: 1.3rem 0;
     text-align: center;
 }
-
 .social-login p {
     font-size: 0.9rem;
     font-weight: 600;
@@ -155,13 +157,11 @@ textarea:focus {
     margin-bottom: 0.5rem;
 }
 
-
 .social-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
-
 .social-buttons button {
     display: flex;
     align-items: center;
@@ -174,20 +174,16 @@ textarea:focus {
     color: #fff;
     gap: 0.5rem;
 }
-
 .social-buttons button img {
     width: 20px;
     height: 20px;
 }
-
 .social-buttons .google-btn {
     background-color: #db4437;
 }
-
 .social-buttons .facebook-btn {
     background-color: #3b5998;
 }
-
 .social-buttons button:hover {
     opacity: 0.8;
 }
@@ -196,14 +192,13 @@ textarea:focus {
 .signup-link {
     text-align: center;
     margin-top: 1rem;
+    font-size: 13px;
 }
-
 .signup-link a {
     text-decoration: none;
     color: #0867F5;
     font-weight: 600;
 }
-
 .signup-link a:hover {
     text-decoration: underline;
 }
@@ -215,64 +210,57 @@ textarea:focus {
     margin-top: 1rem;
     background-color: #fff; /* Cor de fundo branca */
     color: #000; /* Texto preto */
-  }
-  
-  .data-table th,
-  .data-table td {
+  } 
+.data-table th,
+.data-table td {
     padding: 0.75rem;
     text-align: left;
     border: 1px solid #ddd;
-  }
-  
-  .data-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  .data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .data-table tr:hover {
-    background-color: #cccccc;
-  }
-  
-  .btn-editar,
-  .btn-deletar {
-    padding: 0.5rem 0.8rem;
-    margin: 0.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-editar {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .btn-editar:hover {
-    background-color: #45a049;
-  }
-  
-  .btn-deletar {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .btn-deletar:hover {
-    background-color: #e53935;
-  }
-  
-  .message-success {
+}
+.data-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.data-table tr:hover {
+  background-color: #cccccc;
+}
+
+.btn-editar,
+.btn-deletar {
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-editar {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #45a049;
+}
+.btn-deletar {
+  background-color: #f44336;
+  color: white;
+}
+.btn-deletar:hover {
+  background-color: #e53935;
+}
+
+.message-success {
     background-color: #d4edda;
     color: #155724;
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
     text-align: center;
+    width: 100%;
   }
-  
   
   /* Sidebar */
  /* Estilo para o botão de logout */
@@ -288,7 +276,6 @@ textarea:focus {
     font-size: 16px;
     border-radius: 5px;
   }
-  
   .logout-button:hover {
     background-color: #ff3333;
   }
@@ -368,14 +355,47 @@ textarea:focus {
     box-sizing: border-box;
   }
 
-  /* setinha para voltar */
   .back-link {
     font-size: 20px;
-    color: #f8f8f8;  /* Cor azul */
+    color: #f8f8f8;
     text-decoration: none;
     display: inline-block;
 }
 
 .back-button:hover {
     color: #0056b3; 
+}
+
+
+/*kaio*/
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-container input {
+    width: 100%;
+    padding-right: 2.5rem; 
+    box-sizing: border-box;
+}
+.toggle-password-visibility {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #666;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+.input-box p {
+    color: #C7C7C7;
+    font-size: 12px;
+}
+.input-box a {
+    text-decoration: none;
+    color: #0867F5;
+    font-weight: 400;
+    font-size: 12px;
 }
